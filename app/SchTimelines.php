@@ -14,6 +14,11 @@ class SchTimelines extends Model
         'timelines_user_id', 'timelines_user_name', 'timelines_avatar', 'timelines_story', 'timelines_photo', 'timelines_location', 'timelines_type', 'timelines_likes',
     ];
 
+    /**
+     * @param $dates
+     * @return string
+     * Set Attribute
+     */
     public function getCreateAtAttribute($dates)
     {
         return Carbon::parse($dates)->diffForHumans();
